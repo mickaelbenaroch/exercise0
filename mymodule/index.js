@@ -100,6 +100,8 @@ vote3.on("ThereWasANewVote", presentvotes);
 vote3.on("Ipus", resetVotes);
 
 
+
+//An other class that as an Arrray of Vote class and a few methods
 class VoteArray{
 	constructor(Votes = []){
 		this.votearray = Votes;
