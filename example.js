@@ -1,4 +1,5 @@
 var voteArray = require('./mymodule');
+var Port = process.env.PORT || 3000;
 
 //first vote theme
 var vote1 = voteArray.votearray[0];
@@ -69,6 +70,8 @@ app.get('/', function(req, res) {
 	res.send(msg);
 });	
 
-http.createServer(app).listen(3000);
+http.createServer(function(req, res) {
+	res.end("test");
+}).listen(Port);
 console.log("listening on port 3000");
 
